@@ -1,0 +1,127 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvCauses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Symptoms and Causes"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Symptoms of a nonvenomous snake bite:\n\n• Mild swelling\n• Color changes to the skin\n• Bleeding at the bite site"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="16dp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Venomous Snake Bite Symptoms"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Symptoms include:\n\n• Puncture wounds from the bite\n• Pain at the bite site\n• Nausea, vomiting, or dizziness\n• Sweating, drooling, or blurred vision\n• Severe swelling and bleeding"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvFirstAidHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First Aid Steps"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Move the person away from the snake.\n\n2. Keep the bitten area still and lower than the heart.\n\n3. Call emergency services immediately.\n\n4. Remove any tight clothing or jewelry near the bite site.\n\n5. Cover the bite with a clean, dry dressing.\n\n6. Monitor for signs of shock (fainting, rapid pulse, or shallow breathing).\n\n7. Do not cut the wound or try to suck out the venom.\n\n8. Avoid applying ice or a tourniquet."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvAllergicSymptoms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Allergic Reaction Symptoms"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Symptoms of an allergic reaction include:\n\n• Difficulty breathing\n• Swelling of the face or throat\n• Low blood pressure\n• Rapid heartbeat\n\nSeek immediate medical attention if these symptoms appear."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="16dp" />
+
+
+        <TextView
+            android:id="@+id/tvQuickTipsHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quick Emergency Tips"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/tvQuickTipsContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Stay calm to slow venom spread.\n• Avoid moving the affected area.\n• Always seek professional medical help."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="16dp" />
+
+
+        <TextView
+            android:id="@+id/tvVideosHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Useful Videos"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <WebView
+            android:id="@+id/youtubeWebView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            />
+    </LinearLayout>
+</ScrollView>

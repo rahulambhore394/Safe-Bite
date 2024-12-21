@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFragment"
+    android:background="@drawable/shape">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_290sdp"
+            android:layout_height="@dimen/_90sdp"
+            android:id="@+id/profile_card_view"
+            app:cardElevation="@dimen/_10sdp"
+            android:layout_centerHorizontal="true"
+            app:cardCornerRadius="@dimen/_8sdp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/_minus10sdp"
+            android:elevation="@dimen/_40sdp"
+            android:focusable="true"
+            android:clickable="true"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="?android:attr/selectableItemBackground"
+                >
+                <ImageView
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:id="@+id/iv_profile_pic_home"
+                    android:src="@drawable/profile"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_user_fullname_home"
+                    android:text="Rahul Ambhore"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:textSize="@dimen/_17sdp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_toRightOf="@id/iv_profile_pic_home"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:textColor="@color/primaryColor"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_mobile_no_home"
+                    android:text="Mobile No : "
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:textSize="@dimen/_13sdp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_toRightOf="@id/iv_profile_pic_home"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:textColor="@color/primaryColor"
+                    android:layout_below="@id/tv_user_fullname_home"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sosCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_15sdp"
+            app:cardElevation="@dimen/_8sdp"
+            app:cardBackgroundColor="@android:color/white"
+            android:layout_below="@id/profile_card_view"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:focusable="true"
+            android:clickable="true"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="@dimen/_13sdp"
+                android:background="?android:attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:id="@+id/sosButtonLayout"
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:background="@drawable/gradient_button"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:elevation="@dimen/_5sdp"
+                    android:clipToOutline="true">
+
+                    <ImageView
+                        android:id="@+id/sosIcon"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/ic_sos"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:contentDescription="SOS Icon" />
+
+                    <TextView
+                        android:id="@+id/sosButtonText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Send SOS"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/sosInfoText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap the button to send an emergency alert"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/primaryColor"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:gravity="center" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/profile_card_view"
+            android:layout_marginTop="@dimen/_150sdp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_firstaid"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:elevation="@dimen/_25sdp"
+                app:cardCornerRadius="@dimen/_15sdp"
+                android:layout_margin="20dp"
+                android:focusable="true"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/img_firstaid"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/firstaid_kit_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_firstaid"
+                        android:layout_marginLeft="@dimen/_35sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="First Aid"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="17dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_nearest_hospital"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:elevation="@dimen/_25sdp"
+                app:cardCornerRadius="@dimen/_15sdp"
+                android:layout_margin="20dp"
+                android:layout_toRightOf="@id/card_firstaid"
+                android:focusable="true"
+                android:clickable="true"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground"
+                    >
+
+                    <ImageView
+                        android:id="@+id/img_nearest_hospital"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/hospital_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_nearest_hospital"
+                        android:layout_marginLeft="@dimen/_11sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Nearest Hospital"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="17dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_information"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:elevation="@dimen/_25sdp"
+                app:cardCornerRadius="@dimen/_15sdp"
+                android:layout_below="@id/card_firstaid"
+                android:layout_margin="20dp"
+                android:focusable="true"
+                android:clickable="true"
+                >
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/img_information"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="@dimen/_70sdp"
+                        android:layout_marginLeft="@dimen/_22sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:src="@drawable/snake" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_information"
+                        android:layout_marginLeft="@dimen/_27sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Snake Info"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="17dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_rescue"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp"
+                android:layout_marginLeft="@dimen/_6sdp"
+                android:elevation="@dimen/_25sdp"
+                app:cardCornerRadius="@dimen/_15sdp"
+                android:layout_below="@id/card_firstaid"
+                android:layout_margin="20dp"
+                android:layout_toRightOf="@id/card_firstaid"
+                android:focusable="true"
+                android:clickable="true">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackground">
+
+                    <ImageView
+                        android:id="@+id/img_rescue"
+                        android:layout_width="@dimen/_80sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_1sdp"
+                        android:src="@drawable/rescue_icon"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/img_rescue"
+                        android:layout_marginLeft="@dimen/_17sdp"
+                        android:layout_marginTop="@dimen/_6sdp"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Snake Rescue"
+                        android:textColor="@color/primaryColor"
+                        android:textSize="17dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</FrameLayout>

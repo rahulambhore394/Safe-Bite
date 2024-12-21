@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_130sdp"
+        android:id="@+id/iv_app_logo"
+        android:src="@drawable/app_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_45sdp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/side_view"
+        android:src="@drawable/size_shape"
+        android:layout_marginRight="-500dp"
+        android:layout_marginTop="80dp"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_below="@+id/iv_app_logo"
+        app:cardElevation="@dimen/_15sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/secondaryColor"
+                android:fontFamily="sans-serif-black"
+                android:textSize="@dimen/_20sdp"
+                android:id="@+id/tv_login_heading"
+                android:layout_centerHorizontal="true"
+
+                />
+            <EditText
+                android:layout_width="@dimen/_230sdp"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_username_login"
+                android:layout_below="@id/tv_login_heading"
+                android:hint="Username"
+                android:textColor="@color/primaryColor"
+                android:textColorHint="@color/secondaryColor"
+                android:textSize="@dimen/_15sdp"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/_8sdp"
+                android:drawableLeft="@drawable/user__icon"
+                android:drawablePadding="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:inputType="text"
+                android:background="@drawable/et_rounded_corner"
+                />
+
+            <EditText
+                android:layout_width="@dimen/_230sdp"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_password_login"
+                android:layout_below="@id/et_username_login"
+                android:hint="Password"
+                android:textColor="@color/primaryColor"
+                android:textColorHint="@color/secondaryColor"
+                android:textSize="@dimen/_15sdp"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/_8sdp"
+                android:drawableLeft="@drawable/password_icon"
+                android:drawablePadding="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:inputType="textPassword"
+                android:background="@drawable/et_rounded_corner"
+                />
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Show Password"
+                android:id="@+id/chk_pass_show_hide"
+                android:textColor="@color/secondaryColor"
+                android:fontFamily="sans-serif-black"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_19sdp"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@id/et_password_login"
+                android:backgroundTint="@color/primaryColor"
+                android:buttonTint="@color/primaryColor"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_login_login"
+                android:text="Login"
+                android:textColor="@color/primaryColor"
+                android:backgroundTint="@color/secondaryColor"
+                android:textSize="@dimen/_15sdp"
+                android:fontFamily="sans-serif-black"
+                android:layout_below="@id/chk_pass_show_hide"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_12sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_new_user"
+                android:text="New User Click Here"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/secondaryColor"
+                android:fontFamily="sans-serif-black"
+                android:layout_below="@id/btn_login_login"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/_20sdp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/side_view2"
+        android:src="@drawable/size_shape"
+        android:layout_marginLeft="-400dp"
+        android:layout_marginBottom="-200dp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

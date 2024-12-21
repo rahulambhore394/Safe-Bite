@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IdentifyFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape">
+
+        <Button
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:id="@+id/iv_identify_snake"
+            android:text="Open Lens"
+            android:layout_centerHorizontal="true"/>
+
+      <WebView
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/_400sdp"
+          android:id="@+id/webview"
+          android:layout_below="@id/iv_identify_snake"/>
+
+
+    </RelativeLayout>
+
+</FrameLayout>

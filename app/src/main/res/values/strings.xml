@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SafeBite</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="emergency_types">
+        <item>Snake Bite</item>
+        <item>Wild Animal Attack</item>
+        <item>Medical Emergency</item>
+        <item>Fire Emergency</item>
+    </string-array>
+
+</resources>

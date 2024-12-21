@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primaryColor">#3DAD2B</color>
+    <color name="secondaryColor">#EB73287B</color>
+
+
+    <color name="red">#FF3B30</color>
+    <color name="gray">#757575</color>
+    <color name="green">#4CAF50</color> <!-- Matches the theme in your screenshot -->
+
+
+</resources>
