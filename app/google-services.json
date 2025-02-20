@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "727561220221",
+    "project_id": "safebite-57769",
+    "storage_bucket": "safebite-57769.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:727561220221:android:48fce567230dcadff30114",
+        "android_client_info": {
+          "package_name": "com.rahul.safebite"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDez4LgvssdwilNNz4UUk3sq4hI8L7AUmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
