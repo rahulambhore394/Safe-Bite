@@ -1,0 +1,109 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title Section -->
+
+        <!-- Symptoms and Causes Section -->
+        <TextView
+            android:id="@+id/tvCauses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Symptoms and Causes"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <ImageView
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_136sdp"
+            android:src="@drawable/trt2"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:contentDescription="Symptoms Image"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvSteps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Symptoms of a nonvenomous snake bite include:\n\n• Mild swelling.\n• Color changes to your skin.\n• Bleeding at the site of the bite."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="16dp" />
+
+        <!-- Venomous Snake Bite Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Venomous Snake Bite Symptoms"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• Puncture wounds from the bite mark.\n• Pain (sharp, throbbing, burning).\n• Color changes to your skin.\n• Sweating or drooling.\n• Nausea and vomiting.\n• Severe swelling.\n• Muscle weakness or twitching."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="16dp" />
+
+        <ImageView
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_240sdp"
+            android:src="@drawable/trt1"
+            android:scaleType="centerCrop"
+            android:contentDescription="Venomous Bite Image"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Allergic Reaction Section -->
+        <TextView
+            android:id="@+id/tvSymptoms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Allergic Reaction Symptoms"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Symptoms specific to an allergic reaction include:\n\n• Difficulty breathing.\n• Low blood pressure.\n• Swelling in the face and throat."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"
+            android:paddingBottom="16dp" />
+
+        <!-- Useful Videos Section -->
+        <TextView
+            android:id="@+id/tvVideosHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Useful Videos:"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingTop="16dp"
+            android:paddingBottom="8dp"
+            android:textColor="@android:color/black" />
+
+        <WebView
+            android:id="@+id/youtubeWebView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp" />
+    </LinearLayout>
+</ScrollView>
