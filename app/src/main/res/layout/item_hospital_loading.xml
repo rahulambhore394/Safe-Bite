@@ -1,0 +1,50 @@
+<!-- res/layout/item_hospital_loading.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <View
+        android:id="@+id/shimmer_circle"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shimmer_circle" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <View
+            android:id="@+id/shimmer_line1"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shimmer_rect" />
+
+        <!-- Fixed line using layout_weight to simulate 70% width -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/shimmer_line2"
+                android:layout_width="0dp"
+                android:layout_height="14dp"
+                android:layout_weight="0.7"
+                android:background="@drawable/shimmer_rect" />
+
+            <!-- Spacer to take up remaining 30% -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="14dp"
+                android:layout_weight="0.3"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
