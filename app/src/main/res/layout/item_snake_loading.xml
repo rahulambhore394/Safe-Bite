@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Image shimmer -->
+    <View
+        android:id="@+id/shimmer_snake_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@drawable/shimmer_rect"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Name shimmer -->
+    <View
+        android:id="@+id/shimmer_snake_name"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="18dp"
+        android:background="@drawable/shimmer_rect"
+        android:layout_marginBottom="6dp" />
+
+    <!-- Scientific Name shimmer -->
+    <View
+        android:id="@+id/shimmer_scientific_name"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="16dp"
+        android:background="@drawable/shimmer_rect"
+        android:layout_marginBottom="6dp" />
+
+    <!-- Venomous shimmer -->
+    <View
+        android:id="@+id/shimmer_venomous"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="16dp"
+        android:background="@drawable/shimmer_rect"
+        android:layout_marginBottom="6dp" />
+
+    <!-- Found In shimmer -->
+    <View
+        android:id="@+id/shimmer_found_in"
+        android:layout_width="@dimen/_70sdp"
+        android:layout_height="16dp"
+        android:background="@drawable/shimmer_rect" />
+</LinearLayout>
