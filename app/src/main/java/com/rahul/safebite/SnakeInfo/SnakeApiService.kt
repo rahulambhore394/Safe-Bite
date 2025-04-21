@@ -11,4 +11,3 @@ interface SnakeService {
     @GET("taxa")
     suspend fun getSnakes(@Query("q") query: String): Response<iNaturalistResponse>
 }
-

@@ -4,8 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00FB6F03"
+    android:background="@drawable/shape"
     android:id="@+id/main"
+
     tools:context=".SplashActivity">
 
     <ImageView
@@ -15,11 +16,24 @@
         android:src="@drawable/app_icon"
         android:layout_centerInParent="true"/>
 
+    <TextView
+        android:id="@+id/appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_app_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:fontFamily="@font/agbalumo"
+        android:text="Safe Bite"
+        android:textColor="@color/secondaryColor"
+        android:textSize="@dimen/_30sdp" />
+
+
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/splash_progress_bar"
-        android:layout_below="@+id/iv_app_logo"
+        android:layout_below="@+id/appname"
         android:layout_centerHorizontal="true"
         android:indeterminate="true"
         android:indeterminateTint="@color/primaryColor"/>
@@ -27,10 +41,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Developed By Rahul Ambhore"
-        android:textSize="@dimen/_15sdp"
+        android:textSize="@dimen/_13sdp"
         android:textColor="@color/secondaryColor"
         android:fontFamily="sans-serif-black"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/_8sdp"/>
+
+
+
+
 </RelativeLayout>

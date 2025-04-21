@@ -1,6 +1,7 @@
 package com.rahul.safebite
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Geocoder
@@ -17,6 +18,8 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import com.google.android.gms.location.*
+import com.rahul.safebite.chatBot.ChatBotActivity
+import com.rahul.safebite.databinding.ActivityChatBotBinding
 import com.rahul.safebite.databinding.FragmentHomeBinding
 import java.util.Locale
 
@@ -28,6 +31,9 @@ class HomeFragment : Fragment() {
     private lateinit var locationRequest: LocationRequest
     private lateinit var locationCallback: LocationCallback
 
+    private var emergencyMobileNo1: String? = null
+    private var emergencyMobileNo2: String? = null
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,6 +43,23 @@ class HomeFragment : Fragment() {
         displayUserInfo()
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(requireActivity())
+
+        binding.cardFirstaid.setOnClickListener {
+            startActivity(Intent(requireContext(), FirstAidActivity::class.java))
+        }
+        binding.cardNearestHospital.setOnClickListener {
+            startActivity(Intent(requireContext(), NearestHospitalActivity::class.java))
+        }
+        binding.cardRescue.setOnClickListener {
+            startActivity(Intent(requireContext(), SnakeRescueActivity::class.java))
+        }
+        binding.cardInformation.setOnClickListener {
+            startActivity(Intent(requireContext(), SnakeInfoActivity::class.java))
+        }
+
+        binding.fbChatBot.setOnClickListener {
+            startActivity(Intent(requireContext(), ChatBotActivity::class.java))
+        }
 
         locationRequest = LocationRequest.create().apply {
             interval = 10000
@@ -64,12 +87,19 @@ class HomeFragment : Fragment() {
 
         requestLocationPermission()
 
+
+
         return binding.root
     }
 
+    // Fetch user info from SharedPreferences
     private fun displayUserInfo() {
-        val userName = arguments?.getString("userName") ?: "Unknown User"
-        val userMobile = arguments?.getString("userMobile") ?: "No mobile"
+        val sharedPreferences = requireContext().getSharedPreferences("SafeBitePrefs", Context.MODE_PRIVATE)
+
+        val userName = sharedPreferences.getString("userFullName", "Unknown User") ?: "Unknown User"
+        val userMobile = sharedPreferences.getString("userMobile", "No mobile") ?: "No mobile"
+        emergencyMobileNo1 = sharedPreferences.getString("Emergency No1", "") ?: ""
+        emergencyMobileNo2 = sharedPreferences.getString("Emergency No2", "") ?: ""
 
         binding.tvUserFullnameHome.text = userName
         binding.tvMobileNoHome.text = userMobile
@@ -119,6 +149,15 @@ class HomeFragment : Fragment() {
 
     private fun sendEmergencyAlerts() {
         val userName = binding.tvUserFullnameHome.text.toString()
+
+        if (ActivityCompat.checkSelfPermission(
+                requireContext(),
+                Manifest.permission.ACCESS_FINE_LOCATION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
+            return
+        }
+
         fusedLocationClient.lastLocation.addOnSuccessListener { location ->
             if (location != null) {
                 val geocoder = Geocoder(requireContext(), Locale.getDefault())
@@ -151,7 +190,14 @@ class HomeFragment : Fragment() {
     }
 
     private fun sendWhatsAppMessages(message: String) {
-        val emergencyContacts = listOf("+91 7385937358", "+91 9284846391") // Replace with actual numbers
+        val emergencyContacts = mutableListOf<String>()
+        if (!emergencyMobileNo1.isNullOrBlank()) emergencyContacts.add(emergencyMobileNo1!!)
+        if (!emergencyMobileNo2.isNullOrBlank()) emergencyContacts.add(emergencyMobileNo2!!)
+
+        if (emergencyContacts.isEmpty()) {
+            Toast.makeText(requireContext(), "No emergency contacts found", Toast.LENGTH_SHORT).show()
+            return
+        }
 
         for (contact in emergencyContacts) {
             try {
@@ -167,7 +213,15 @@ class HomeFragment : Fragment() {
     }
 
     private fun sendSMSMessages(message: String) {
-        val emergencyContacts = listOf("+91 7385937358", "+91 9284846391") // Replace with actual numbers
+        val emergencyContacts = mutableListOf<String>()
+        if (!emergencyMobileNo1.isNullOrBlank()) emergencyContacts.add(emergencyMobileNo1!!)
+        if (!emergencyMobileNo2.isNullOrBlank()) emergencyContacts.add(emergencyMobileNo2!!)
+
+        if (emergencyContacts.isEmpty()) {
+            Toast.makeText(requireContext(), "No emergency contacts found", Toast.LENGTH_SHORT).show()
+            return
+        }
+
         val smsManager = SmsManager.getDefault()
 
         for (contact in emergencyContacts) {
@@ -195,3 +249,5 @@ class HomeFragment : Fragment() {
         _binding = null
     }
 }
+
+

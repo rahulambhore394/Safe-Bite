@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.rahul.safebite" />
-                  <option name="mobileSdkAppId" value="1:825733608181:android:6e4ae08b34e7c9b7c0cbbc" />
-                  <option name="projectId" value="safebite-6ba5f" />
-                  <option name="projectNumber" value="825733608181" />
+                  <option name="mobileSdkAppId" value="1:727561220221:android:48fce567230dcadff30114" />
+                  <option name="projectId" value="safebite-57769" />
+                  <option name="projectNumber" value="727561220221" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

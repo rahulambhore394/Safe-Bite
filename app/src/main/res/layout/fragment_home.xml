@@ -7,10 +7,21 @@
     tools:context=".HomeFragment"
     android:background="@drawable/shape">
 
+
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fb_chatBot"
+            android:src="@drawable/baseline_mic_24"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/_11sdp"/>
 
         <androidx.cardview.widget.CardView
             android:layout_width="@dimen/_290sdp"
@@ -43,7 +54,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/tv_user_fullname_home"
-                    android:text="Rahul Ambhore"
+                    android:text="User"
                     android:layout_marginLeft="@dimen/_20sdp"
                     android:textSize="@dimen/_17sdp"
                     android:textStyle="bold"
@@ -67,6 +78,8 @@
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
+
+
 
         <androidx.cardview.widget.CardView
             android:id="@+id/sosCardView"

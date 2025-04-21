@@ -56,21 +56,28 @@ class LoginActivity : AppCompatActivity() {
                 if (snapshot.exists()) {
                     val storedPassword = snapshot.child("password").getValue(String::class.java)
                     if (storedPassword == password) {
-                        val userName = snapshot.child("fullname").getValue(String::class.java) ?: "Unknown User"
+                        // Fetch all the user data
+                        val userFullName = snapshot.child("fullname").getValue(String::class.java) ?: "Unknown User"
                         val userMobile = snapshot.child("mobileNo").getValue(String::class.java) ?: "No mobile"
+                        val userName = snapshot.child("username").getValue(String::class.java) ?: "No email"
+                        val emergencyNumber1 = snapshot.child("emergencyMobileNo1").getValue(String::class.java) ?: "No Emergency No1"
+                        val emergencyNumber2 = snapshot.child("emergencyMobileNo2").getValue(String::class.java) ?: "No Emergency No2"
+                        // Add more fields as necessary
 
+                        // Store the fetched data in SharedPreferences
                         val sharedPreferences = getSharedPreferences("SafeBitePrefs", Context.MODE_PRIVATE)
                         with(sharedPreferences.edit()) {
                             putBoolean("isLoggedIn", true)
+                            putString("userFullName", userFullName)
                             putString("userName", userName)
                             putString("userMobile", userMobile)
+                            putString("Emergency No1", emergencyNumber1)
+                            putString("Emergency No2", emergencyNumber2)
                             apply()
                         }
 
-                        val intent = Intent(this@LoginActivity, HomeActivity::class.java).apply {
-                            putExtra("userName", userName)
-                            putExtra("userMobile", userMobile)
-                        }
+                        // Pass the data to the HomeActivity
+                        val intent = Intent(this@LoginActivity, HomeActivity::class.java)
                         startActivity(intent)
                         finish()
                     } else {
@@ -80,10 +87,10 @@ class LoginActivity : AppCompatActivity() {
                     Toast.makeText(this@LoginActivity, "User not found", Toast.LENGTH_SHORT).show()
                 }
             }
-
             override fun onCancelled(error: DatabaseError) {
                 Toast.makeText(this@LoginActivity, "Failed to read data: ${error.message}", Toast.LENGTH_SHORT).show()
             }
         })
     }
+
 }

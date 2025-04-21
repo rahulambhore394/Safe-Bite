@@ -1,29 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".IdentifyFragment">
+    android:background="@drawable/shape">
 
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/shape">
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nearby Hospitals"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_3sdp"/>
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/camera"
+            android:padding="@dimen/_60sdp"
+            android:background="#CCCCCC" />
 
         <Button
-            android:layout_width="@dimen/_150sdp"
-            android:layout_height="@dimen/_150sdp"
-            android:id="@+id/iv_identify_snake"
-            android:text="Open Lens"
-            android:layout_centerHorizontal="true"/>
+            android:id="@+id/btnSelect"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Photo" />
 
-      <WebView
-          android:layout_width="match_parent"
-          android:layout_height="@dimen/_400sdp"
-          android:id="@+id/webview"
-          android:layout_below="@id/iv_identify_snake"/>
+        <Button
+            android:id="@+id/btnCapture"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Capture Photo" />
 
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-    </RelativeLayout>
-
-</FrameLayout>
+        <TextView
+            android:id="@+id/infoText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:textSize="14sp" />
+    </LinearLayout>
+</ScrollView>

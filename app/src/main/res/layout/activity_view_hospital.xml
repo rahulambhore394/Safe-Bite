@@ -32,12 +32,12 @@
 
 
 
-    <com.google.android.gms.maps.MapView
-        android:id="@+id/mapView"
+    <fragment
+        android:id="@+id/mapFragment"
+        android:layout_marginTop="20dp"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_marginTop="16dp" />
-
+        android:layout_height="@dimen/_400sdp" />
     <Button
         android:id="@+id/btnViewOnMap"
         android:layout_width="match_parent"

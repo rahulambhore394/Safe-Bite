@@ -9,12 +9,21 @@
     tools:context=".NearestHospitalActivity"
     android:background="@drawable/shape">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nearby Hospitals"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_3sdp"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewHospitals"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="8dp"
-        android:scrollbars="vertical"
-        android:padding="@dimen/_3sdp"/>
+        />
 
 </LinearLayout>
